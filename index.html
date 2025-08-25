@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚂 Indian Railway </h1>
+            <p>Find trains between stations across India</p>
+        </div>
+
+        <div class="search-card">
+            <div class="search-form">
+                <div class="form-group">
+                    <label for="sourceStation">From Station</label>
+                    <select id="sourceStation">
+                        <option value="">Select Source Station</option>
+                        <option value="NDLS">New Delhi (NDLS)</option>
+                        <option value="BCT">Mumbai Central (BCT)</option>
+                        <option value="MAS">Chennai Central (MAS)</option>
+                        <option value="HWH">Howrah Junction (HWH)</option>
+                        <option value="SBC">Bengaluru City Junction (SBC)</option>
+                        <option value="HYB">Hyderabad Deccan (HYB)</option>
+                        <option value="PUNE">Pune Junction (PUNE)</option>
+                        <option value="JP">Jaipur Junction (JP)</option>
+                        <option value="LKO">Lucknow NR (LKO)</option>
+                        <option value="PNBE">Patna Junction (PNBE)</option>
+                        <option value="ADI">Ahmedabad Junction (ADI)</option>
+                        <option value="BPL">Bhopal Junction (BPL)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="destinationStation">To Station</label>
+                    <select id="destinationStation">
+                        <option value="">Select Destination Station</option>
+                        <option value="NDLS">New Delhi (NDLS)</option>
+                        <option value="BCT">Mumbai Central (BCT)</option>
+                        <option value="MAS">Chennai Central (MAS)</option>
+                        <option value="HWH">Howrah Junction (HWH)</option>
+                        <option value="SBC">Bengaluru City Junction (SBC)</option>
+                        <option value="HYB">Hyderabad Deccan (HYB)</option>
+                        <option value="PUNE">Pune Junction (PUNE)</option>
+                        <option value="JP">Jaipur Junction (JP)</option>
+                        <option value="LKO">Lucknow NR (LKO)</option>
+                        <option value="PNBE">Patna Junction (PNBE)</option>
+                        <option value="ADI">Ahmedabad Junction (ADI)</option>
+                        <option value="BPL">Bhopal Junction (BPL)</option>
+                    </select>
+                </div>
+                
+                <div class="button-group">
+                    <button class="search-btn" onclick="searchTrains()">🔍 Search Trains</button>
+                    <button class="init-btn" onclick="initializeDatabase()">Init DB</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="statusMessage"></div>
+        <div id="resultsContainer" style="display: none;">
+            <div class="results-card">
+                <div class="results-header">
+                    <h2 id="resultsTitle">Available Trains</h2>
+                    <span class="results-count" id="resultsCount">0 trains found</span>
+                </div>
+                <div id="trainsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
